@@ -1,0 +1,7 @@
+# Apache 2.4 / compatible LiteSpeed. Never upload SQL or repository metadata.
+Options -Indexes
+# The local document root is also the repository root.
+RedirectMatch 404 "(?i)/\.git(?:/|$)"
+<FilesMatch "(?i)(^\.|\.(sql|md|log|bak|old|orig|zip|gz)$|^(config(?:\.example)?|db)\.php(?:\..*)?$)">
+    Require all denied
+</FilesMatch>

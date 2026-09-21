@@ -1,0 +1,22 @@
+# Private configuration at any depth (including editor backup copies).
+config.php
+config.php.*
+.env
+.env.*
+!.env.example
+*.log
+*.bak
+*.old
+*.orig
+*.swp
+*~
+backups/
+dumps/
+*.sql.gz
+*.sql.zip
+*.zip
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+

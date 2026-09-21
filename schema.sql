@@ -1,0 +1,22 @@
+CREATE TABLE IF NOT EXISTS questions (
+    id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    question_no TINYINT UNSIGNED NOT NULL UNIQUE,
+    category VARCHAR(100) NOT NULL,
+    question_text TEXT NOT NULL,
+    option_a TEXT NOT NULL,
+    option_b TEXT NOT NULL,
+    option_c TEXT NOT NULL,
+    option_d TEXT NOT NULL,
+    correct_option ENUM('A','B','C','D') NOT NULL,
+    explanation TEXT NOT NULL,
+    is_active TINYINT(1) NOT NULL DEFAULT 1,
+    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+CREATE TABLE IF NOT EXISTS attempts (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    score SMALLINT UNSIGNED NOT NULL,
+    total_questions SMALLINT UNSIGNED NOT NULL,
+    percentage DECIMAL(5,2) NOT NULL,
+    submitted_at DATETIME NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
