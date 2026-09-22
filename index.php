@@ -30,7 +30,7 @@ if (!$questions) {
 <body>
 <main class="container">
     <header class="hero">
-        <p class="eyebrow">Practice Assessment &bull; Updated</p>
+        <p class="eyebrow">Practice Assessment &bull; Auto-deploy Test 2</p>
         <h1><?= htmlspecialchars(APP_TITLE) ?></h1>
         <p>20 questions covering Hindi grammar, English comprehension, AI-response evaluation, fact-checking, and research judgment.</p>
         <div class="meta">
